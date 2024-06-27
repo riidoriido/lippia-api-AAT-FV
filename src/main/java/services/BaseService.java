@@ -6,17 +6,7 @@ import java.util.Properties;
 
 public class BaseService {
 
-    public static final ThreadLocal<String> API_KEY = new ThreadLocal<>();
+    public static final ThreadLocal<String> X_API_KEY = new ThreadLocal<>();
+    public static final ThreadLocal<String> TIME_ENTRY_ID = new ThreadLocal<>();
 
-    public static String setApiKey() throws IOException {
-
-        Properties properties = new Properties();
-        InputStream input;
-
-        input = BaseService.class.getClassLoader().getResourceAsStream("config.properties");
-
-        properties.load(input);
-
-        return properties.getProperty("clockify.x-api-key");
-    }
 }

@@ -1,11 +1,15 @@
 package ar.steps;
 
 import api.config.EntityConfiguration;
+import api.model.GetTimeEntry;
 import com.crowdar.core.PageSteps;
 import com.google.api.client.repackaged.com.google.common.base.Splitter;
-import cucumber.api.java.en.When;
+import io.cucumber.java.en.*;
 import org.apache.commons.lang.StringUtils;
+import services.BaseService;
+import services.TimeEntryGET;
 
+import java.io.IOException;
 import java.lang.reflect.InvocationTargetException;
 import java.util.Map;
 
@@ -30,4 +34,10 @@ public class CommonSteps extends PageSteps {
         }
         return parameters;
     }
+
+    @Given("user provides x-api-key")
+    public void provideApiKey() throws IOException {
+        BaseService.X_API_KEY.set(BaseService.setApiKey());
+    }
+
 }

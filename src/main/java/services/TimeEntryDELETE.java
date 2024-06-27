@@ -1,4 +1,6 @@
 package services;
 
-public class TimeEntryDELETE {
+import com.crowdar.api.rest.MethodsService;
+
+public class TimeEntryDELETE extends MethodsService {
 }

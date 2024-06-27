@@ -1,11 +1,10 @@
 {
   "headers": {
     "Content-Type": "application/json",
-    "x-api-key": "{{api.key}}"
+    "x-api-key": "ZjdkMjY5MmEtNGM1MS00ZTdiLTlmNzAtYjA4YmEyY2Q3OGVk"
   },
 
-  "endpoint": "/workspaces/666a1a482633de2f310f2a90/time-entries",
-  "url": "{{base.url}}",
+  "endpoint": "https://api.clockify.me/api/v1/workspaces/666a1a482633de2f310f2a90/time-entries",
 
   "body": {
     "start": "2024-06-03T08:00:00Z",

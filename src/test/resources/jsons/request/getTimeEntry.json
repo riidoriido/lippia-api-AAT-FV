@@ -1,9 +1,9 @@
 {
   "headers": {
+    "Accept": "*/*",
     "Content-Type": "application/json",
-    "x-api-key": "{{api.key}}"
+    "x-api-key": "ZjdkMjY5MmEtNGM1MS00ZTdiLTlmNzAtYjA4YmEyY2Q3OGVk"
   },
 
-  "endpoint": "/workspaces/666a1a482633de2f310f2a90/time-entries/",
-  "url": "{{base.url}}"
+  "endpoint": "https://api.clockify.me/api/v1/workspaces/666a1a482633de2f310f2a90/user/65383a07205d0441c5269f46/time-entries"
 }

@@ -2,35 +2,42 @@
 
 Feature: API tests with Clockify API
 
-  Scenario Outline:Get hours from Time Entry
-    Given user provides <x-api-key>
+  @GetTimeEntry
+  Scenario Outline:Get Time Entry
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
     Then status code <statusCode> is obtained
-    And define timeEntryId
+    And expected response is obtained in '<entity>' with '<expectedResponse>'
+    And print '<expectedResponse>'
     Examples:
-      | x-api-key                                        | operation | entity         | jsonName       | statusCode |
-      | ZjdkMjY5MmEtNGM1MS00ZTdiLTlmNzAtYjA4YmEyY2Q3OGVk | GET       | GET_TIME_ENTRY | getTimeEntries | 200        |
+      | operation | entity         | jsonName       | statusCode | expectedResponse |
+      | GET       | GET_TIME_ENTRY | getTimeEntry | 200        | OK               |
 
+  @AddTimeEntry
   Scenario Outline:Add Time Entry to project
-    Given user provides <x-api-key>
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
     Then status code <statusCode> is obtained
+    And expected response is obtained in '<entity>' with '<expectedResponse>'
+    And print '<expectedResponse>'
     Examples:
-      | x-api-key                                        | operation | entity         | jsonName       | statusCode |
-      | ZjdkMjY5MmEtNGM1MS00ZTdiLTlmNzAtYjA4YmEyY2Q3OGVk | POST       | POST_TIME_ENTRY | addTimeEntry | 201       |
+      | operation | entity          | jsonName     | statusCode | expectedResponse |
+      | POST      | POST_TIME_ENTRY | addTimeEntry | 201        | OK               |
 
+  @EditTimeEntry
   Scenario Outline:Edit Time Entry
-    Given user provides <x-api-key>
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
     Then status code <statusCode> is obtained
+    And expected response is obtained in '<entity>' with '<expectedResponse>'
+    And print '<expectedResponse>'
     Examples:
-      | x-api-key                                        | operation | entity         | jsonName       | statusCode |
-      | ZjdkMjY5MmEtNGM1MS00ZTdiLTlmNzAtYjA4YmEyY2Q3OGVk | PUT       | PUT_TIME_ENTRY | editTimeEntries | 200        |
+      | operation | entity         | jsonName        | statusCode | expectedResponse |
+      | PUT       | PUT_TIME_ENTRY | editTimeEntry | 200        | OK               |
 
+  @DeleteTimeEntry
   Scenario Outline:Delete Time Entry
-    Given user provides <x-api-key>
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
     Then status code <statusCode> is obtained
+    And expected response is obtained in '<entity>' with '<expectedResponse>'
+    And print '<expectedResponse>'
     Examples:
-      | x-api-key                                        | operation | entity         | jsonName       | statusCode |
-      | ZjdkMjY5MmEtNGM1MS00ZTdiLTlmNzAtYjA4YmEyY2Q3OGVk | DELETE       | DELETE_TIME_ENTRY | getTimeEntries | 204        |
+      | operation | entity            | jsonName       | statusCode | expectedResponse |
+      | DELETE    | DELETE_TIME_ENTRY | deleteTimeEntry | 204        | OK               |

@@ -16,8 +16,8 @@
         </developer>
     </developers>
     <groupId>com.Crowdar</groupId>
-    <artifactId>clockify-lippia-api-tp6</artifactId>
-    <name>Clockify Lippia API TP6</name>
+    <artifactId>lippiaAPI-tpFinal-2024</artifactId>
+    <name>Lippia API tpFINAL 2024</name>
     <packaging>jar</packaging>
     <url>http://maven.apache.org</url>
 
@@ -26,7 +26,7 @@
         <base.api.url>https://api.clockify.me/api/</base.api.url>
         <cucumber.stepsDefinitions>--glue ar/steps --glue com/crowdar/api/rest</cucumber.stepsDefinitions>
         <cucumber.hooks>--glue com/crowdar/bdd/cukes --glue ar/apiExampleProject/hook</cucumber.hooks>
-        <cucumber.tags>@ClockifySuccess</cucumber.tags>
+        <cucumber.tags>@GetTimeEntry</cucumber.tags>
         <crowdar.cucumber.plugins>--plugin pretty --plugin com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:</crowdar.cucumber.plugins>
         <crowdar.extent.host.name>LocalMachine</crowdar.extent.host.name>
         <crowdar.extent.environment>Local</crowdar.extent.environment>
