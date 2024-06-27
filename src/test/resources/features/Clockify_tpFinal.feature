@@ -7,7 +7,6 @@ Feature: API tests with Clockify API
     When I perform a '<operation>' to '<entity>' endpoint with the '<jsonName>' and ''
     Then status code <statusCode> is obtained
     And expected response is obtained in '<entity>' with '<expectedResponse>'
-    And print '<expectedResponse>'
     Examples:
       | operation | entity         | jsonName       | statusCode | expectedResponse |
       | GET       | GET_TIME_ENTRY | getTimeEntry | 200        | OK               |
