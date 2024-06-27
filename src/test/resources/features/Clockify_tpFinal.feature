@@ -8,7 +8,7 @@ Feature: API tests with Clockify API
     Then status code <statusCode> is obtained
     And expected response is obtained in '<entity>' with '<expectedResponse>'
     Examples:
-      | operation | entity         | jsonName       | statusCode | expectedResponse |
+      | operation | entity         | jsonName     | statusCode | expectedResponse |
       | GET       | GET_TIME_ENTRY | getTimeEntry | 200        | OK               |
 
   @AddTimeEntry
@@ -28,7 +28,7 @@ Feature: API tests with Clockify API
     And expected response is obtained in '<entity>' with '<expectedResponse>'
     And print '<expectedResponse>'
     Examples:
-      | operation | entity         | jsonName        | statusCode | expectedResponse |
+      | operation | entity         | jsonName      | statusCode | expectedResponse |
       | PUT       | PUT_TIME_ENTRY | editTimeEntry | 200        | OK               |
 
   @DeleteTimeEntry
@@ -38,5 +38,5 @@ Feature: API tests with Clockify API
     And expected response is obtained in '<entity>' with '<expectedResponse>'
     And print '<expectedResponse>'
     Examples:
-      | operation | entity            | jsonName       | statusCode | expectedResponse |
+      | operation | entity            | jsonName        | statusCode | expectedResponse |
       | DELETE    | DELETE_TIME_ENTRY | deleteTimeEntry | 204        | OK               |

@@ -34,10 +34,4 @@ public class CommonSteps extends PageSteps {
         }
         return parameters;
     }
-
-    @Given("user provides x-api-key")
-    public void provideApiKey() throws IOException {
-        BaseService.X_API_KEY.set(BaseService.setApiKey());
-    }
-
 }
